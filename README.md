@@ -18,6 +18,8 @@ Este projeto utiliza **Docker** para subir os serviços do back-end (NestJS), fr
 
     Subir o front-end (Angular) na porta 4200
 
+    Subir rabbitmq na porta 5672
+
     Subir o banco de dados PostgreSQL na porta 5432
 
     Acesse o front-end em: http://localhost:4200
