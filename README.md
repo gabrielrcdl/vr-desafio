@@ -1,6 +1,6 @@
 # 🚀 Como rodar o projeto
 
-Este projeto utiliza **Docker** para subir os serviços do back-end (NestJS), front-end (Angular) e banco de dados (PostgreSQL).
+Este projeto utiliza **Docker** para subir os serviços do back-end (NestJS), front-end (Angular) e banco de dados (PostgreSQL) e Menssageria com RabbitMQ.
 
 ## Pré-requisitos
 
@@ -17,6 +17,8 @@ Este projeto utiliza **Docker** para subir os serviços do back-end (NestJS), fr
     Subir o back-end (NestJS) na porta 3000
 
     Subir o front-end (Angular) na porta 4200
+
+    Subir rabbitmq na porta 5672
 
     Subir o banco de dados PostgreSQL na porta 5432
 
