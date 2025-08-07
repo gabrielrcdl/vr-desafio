@@ -1,0 +1,44 @@
+<div class="notification-wrapper">
+  <div class="notification-box">
+    <h2 class="section-title">Enviar Notificação</h2>
+
+    <div class="input-container">
+      <input
+        type="text"
+        [(ngModel)]="message"
+        placeholder="Digite sua mensagem..."
+        class="message-input"
+      />
+      <button
+        (click)="sendNotification()"
+        class="action-button"
+        [disabled]="isButtonDisabled()"
+      >
+        Enviar Notificação
+      </button>
+    </div>
+
+    <h3 class="section-title">Notificações Enviadas</h3>
+
+    <div class="notifications-container">
+      <div *ngFor="let n of notifications" class="notification-card">
+        <div class="notification-header">
+          <span class="message-id">{{ n.messageId }}</span>
+          <span
+            class="status-badge"
+            [class.status-success]="n.status === 'PROCESSADO_SUCESSO'"
+            [class.status-failure]="n.status === 'FALHA_PROCESSAMENTO'"
+            [class.status-pending]="n.status === 'AGUARDANDO PROCESSAMENTO'"
+          >
+            {{ n.status }}
+          </span>
+        </div>
+        <p class="message-content">{{ n.message }}</p>
+      </div>
+    </div>
+
+    <ng-container *ngIf="notifications.length === 0">
+      <p class="no-notifications">Nenhuma notificação enviada ainda.</p>
+    </ng-container>
+  </div>
+</div>
